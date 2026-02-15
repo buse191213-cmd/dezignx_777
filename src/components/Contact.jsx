@@ -54,7 +54,42 @@ export default function Contact() {
             {sent && !error && <div className="mt-5 rounded-2xl border border-emerald-300/20 bg-emerald-300/10 p-4 text-sm text-emerald-100">✅ Gesendet! Wir melden uns schnell.</div>}
             {!!error && <div className="mt-5 rounded-2xl border border-red-300/20 bg-red-300/10 p-4 text-sm text-red-100">❌ Senden fehlgeschlagen. Bitte direkt an <span className="font-semibold">info@dezignx.de</span> schreiben.</div>}
 
-            <form className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
+            <form className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2" onSubmit={async (e) => {
+  e.preventDefault();
+  setError("");
+  setLoading(true);
+
+  const formData = new FormData(e.target);
+
+  const data = {
+    name: formData.get("name"),
+    email: formData.get("email"),
+    subject: formData.get("subject"),
+    message: formData.get("message"),
+  };
+
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!res.ok) {
+      throw new Error("Mail konnte nicht gesendet werden.");
+    }
+
+    setSent(true);
+    e.target.reset();
+
+  } catch (err) {
+    setError("Beim Senden ist ein Fehler aufgetreten.");
+  } finally {
+    setLoading(false);
+  }
+}}>
               <div>
                 <label className="text-sm font-semibold text-white/85">Name</label>
                 <input name="name" required className="mt-2 w-full rounded-2xl border border-white/12 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-cyanAccent/50" placeholder="Max Mustermann" />

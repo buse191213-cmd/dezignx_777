@@ -1,10 +1,39 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import rateLimit from "express-rate-limit";
+import helmet from "helmet";
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+
+// Security headers
+app.use(helmet());
+
+// JSON body limit (prod için iyi)
+app.use(express.json({ limit: "20kb" }));
+
+// CORS (sadece kendi domainlerin)
+app.use(
+  cors({
+    origin: ["https://dezignx.de", "https://www.dezignx.de"],
+    methods: ["POST"],
+  })
+);
+
+// Rate limit (sadece contact endpoint’e)
+const limiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 5,
+});
+app.use("/api/contact", limiter);
+
+// ENV sanity check (opsiyonel ama çok önerilir)
+for (const key of ["SMTP_HOST", "SMTP_USER", "SMTP_PASS", "MAIL_TO"]) {
+  if (!process.env[key]) {
+    console.error(`Missing env: ${key}`);
+  }
+}
 
 app.post("/api/contact", async (req, res) => {
   try {
@@ -17,7 +46,8 @@ app.post("/api/contact", async (req, res) => {
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT || 587),
-      secure: false, // 587 -> STARTTLS
+      secure: false, // 587 => STARTTLS
+      requireTLS: true,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -32,9 +62,10 @@ app.post("/api/contact", async (req, res) => {
       text: `Name: ${name}\nE-Mail: ${email}\nFirma: ${company || "-"}\n\nNachricht:\n${message}`,
     });
 
-    res.json({ ok: true });
+    return res.json({ ok: true });
   } catch (e) {
-    res.status(500).json({ ok: false, error: "Mail failed" });
+    console.error("MAIL ERROR:", e); // prod’da log kalsın
+    return res.status(500).json({ ok: false, error: "Mail failed" });
   }
 });
 
