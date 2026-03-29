@@ -12,7 +12,8 @@ import Why from "./components/Why.jsx"
 import Contact from "./components/Contact.jsx"
 import Footer from "./components/Footer.jsx"
 import CookieConsent from "./components/CookieConsent.jsx"
-
+import Impressum from "./Impressum"
+import Datenschutz from "./Datenschutz"
 export default function App() {
   return (
     <div className="min-h-screen bg-[#070B18] text-white">
@@ -34,5 +35,16 @@ export default function App() {
       <Footer />
       <CookieConsent />
     </div>
+  )
+}
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/impressum" element={<Impressum />} />
+        <Route path="/datenschutz" element={<Datenschutz />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
