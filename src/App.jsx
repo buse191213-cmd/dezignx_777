@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar.jsx"
 import Hero from "./components/Hero.jsx"
 import CardFan from "./components/CardFan.jsx"
@@ -14,7 +15,8 @@ import Footer from "./components/Footer.jsx"
 import CookieConsent from "./components/CookieConsent.jsx"
 import Impressum from "./Impressum"
 import Datenschutz from "./Datenschutz"
-export default function App() {
+
+function HomePage() {
   return (
     <div className="min-h-screen bg-[#070B18] text-white">
       <Navbar />
@@ -24,7 +26,6 @@ export default function App() {
         <Process />
         <MobileApp />
         <BentoSection />
-        
         <Dashboard />
         <Projects />
         <Satisfaction />
@@ -37,6 +38,7 @@ export default function App() {
     </div>
   )
 }
+
 export default function App() {
   return (
     <BrowserRouter>
