@@ -9,7 +9,6 @@ export default function Datenschutz() {
 
   return (
     <div style={styles.page}>
-      {/* Breadcrumb */}
       <div style={styles.breadcrumb}>
         <Link to="/" style={styles.breadcrumbLink}>Startseite</Link>
         <span style={styles.breadcrumbSep}>/</span>
@@ -22,10 +21,8 @@ export default function Datenschutz() {
         <section style={styles.section}>
           <h2 style={styles.h2}>1. Verantwortlicher</h2>
           <p style={styles.text}>
-            DEZIGNX, Inhaber [DEIN VOLLSTÄNDIGER NAME], [STRAßE], [PLZ] [STADT],{" "}
-            <a href="mailto:info@dezignx.de" style={styles.link}>
-              info@dezignx.de
-            </a>
+            DEZIGNX, Inhaber Sener Kirli, Westuferstr. 25, 45356 Essen,{" "}
+            <a href="mailto:info@dezignx.de" style={styles.link}>info@dezignx.de</a>
           </p>
         </section>
 
@@ -66,9 +63,7 @@ export default function Datenschutz() {
           <h2 style={styles.h2}>6. Kontakt Datenschutz</h2>
           <p style={styles.text}>
             Fragen zum Datenschutz bitte an:{" "}
-            <a href="mailto:info@dezignx.de" style={styles.link}>
-              info@dezignx.de
-            </a>
+            <a href="mailto:info@dezignx.de" style={styles.link}>info@dezignx.de</a>
           </p>
         </section>
       </div>
@@ -90,26 +85,14 @@ const styles = {
     margin: "0 auto",
     padding: "0 24px 24px",
     fontSize: "13px",
-    color: "#666",
     display: "flex",
     gap: "6px",
     alignItems: "center",
   },
-  breadcrumbLink: {
-    color: "#888",
-    textDecoration: "none",
-  },
-  breadcrumbSep: {
-    color: "#444",
-  },
-  breadcrumbCurrent: {
-    color: "#aaa",
-  },
-  container: {
-    maxWidth: "760px",
-    margin: "0 auto",
-    padding: "0 24px",
-  },
+  breadcrumbLink: { color: "#666", textDecoration: "none" },
+  breadcrumbSep: { color: "#444" },
+  breadcrumbCurrent: { color: "#888" },
+  container: { maxWidth: "760px", margin: "0 auto", padding: "0 24px" },
   h1: {
     fontFamily: "'Archivo', sans-serif",
     fontSize: "clamp(28px, 5vw, 42px)",
@@ -118,9 +101,7 @@ const styles = {
     marginBottom: "32px",
     lineHeight: 1.15,
   },
-  section: {
-    marginBottom: "36px",
-  },
+  section: { marginBottom: "36px" },
   h2: {
     fontFamily: "'Archivo', sans-serif",
     fontSize: "18px",
@@ -131,14 +112,6 @@ const styles = {
     paddingBottom: "10px",
     borderBottom: "1px solid #1e1e28",
   },
-  text: {
-    fontSize: "14px",
-    lineHeight: "1.75",
-    color: "#999",
-    marginBottom: "0",
-  },
-  link: {
-    color: "#7c7cf0",
-    textDecoration: "none",
-  },
+  text: { fontSize: "14px", lineHeight: "1.8", color: "#888", marginBottom: "0" },
+  link: { color: "#7c7cf0", textDecoration: "none" },
 };
