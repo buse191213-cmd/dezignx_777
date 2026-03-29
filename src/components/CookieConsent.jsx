@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false)
@@ -18,14 +19,11 @@ export default function CookieConsent() {
 
   return (
     <>
-      {/* Backdrop */}
       <div className="fixed inset-0 z-[998] bg-black/40 backdrop-blur-sm transition-opacity duration-500" onClick={accept} />
 
-      {/* Banner */}
       <div className="fixed bottom-0 inset-x-0 z-[999] px-4 pb-4 animate-[slideUp_.5s_ease-out]">
         <div className="mx-auto max-w-2xl rounded-2xl border border-white/12 bg-[#0C1430]/95 p-6 backdrop-blur-xl shadow-[0_-20px_80px_rgba(0,0,0,.5)]">
 
-          {/* Main view */}
           {!showSettings && (
             <>
               <div className="flex items-start gap-4">
@@ -34,8 +32,8 @@ export default function CookieConsent() {
                   <h3 className="font-archivo text-base font-bold text-white">Akzeptieren Sie Cookies?</h3>
                   <p className="mt-1.5 text-sm text-white/55 leading-relaxed">
                     Wir verwenden notwendige sowie — mit Ihrer Einwilligung — Analyse- und Marketing-Cookies, um Ihr Nutzungserlebnis zu verbessern. Details:{" "}
-                    <a href="#datenschutz" className="underline underline-offset-2 text-white/70 hover:text-white transition">Datenschutzerklärung</a>,{" "}
-                    <a href="#impressum" className="underline underline-offset-2 text-white/70 hover:text-white transition">Impressum</a>.
+                    <Link to="/datenschutz" className="underline underline-offset-2 text-white/70 hover:text-white transition">Datenschutzerklärung</Link>,{" "}
+                    <Link to="/impressum" className="underline underline-offset-2 text-white/70 hover:text-white transition">Impressum</Link>.
                   </p>
                 </div>
               </div>
@@ -57,7 +55,6 @@ export default function CookieConsent() {
             </>
           )}
 
-          {/* Settings view */}
           {showSettings && (
             <>
               <div className="flex items-center justify-between mb-4">
@@ -66,7 +63,6 @@ export default function CookieConsent() {
               </div>
 
               <div className="grid gap-3">
-                {/* Necessary - always on */}
                 <div className="flex items-center justify-between rounded-xl border border-white/8 bg-white/[0.03] px-4 py-3">
                   <div>
                     <div className="text-sm font-semibold text-white/90">Notwendig</div>
@@ -77,7 +73,6 @@ export default function CookieConsent() {
                   </div>
                 </div>
 
-                {/* Analyse */}
                 <div className="flex items-center justify-between rounded-xl border border-white/8 bg-white/[0.03] px-4 py-3">
                   <div>
                     <div className="text-sm font-semibold text-white/90">Analyse</div>
@@ -90,7 +85,6 @@ export default function CookieConsent() {
                   </button>
                 </div>
 
-                {/* Marketing */}
                 <div className="flex items-center justify-between rounded-xl border border-white/8 bg-white/[0.03] px-4 py-3">
                   <div>
                     <div className="text-sm font-semibold text-white/90">Marketing</div>
