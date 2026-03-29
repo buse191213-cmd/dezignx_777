@@ -26,7 +26,6 @@
       content="Premium Digital Marketing Agentur – Webdesign, SEO, Performance Marketing & Branding."
     />
     <meta property="og:url" content="https://www.dezignx.de/" />
-    <!-- TODO: Bu görseli gerçekten oluşturup public içine koy -->
     <meta property="og:image" content="https://www.dezignx.de/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -50,23 +49,34 @@
       rel="stylesheet"
     />
 
-    <!-- Favicons (placeholders) -->
-    <!-- TODO: public/favicon.ico ve icon dosyalarını ekle -->
-    <link rel="icon" href="/favicon.ico" />
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.png" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <!-- Optional: PWA manifest (istersen) -->
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Structured Data: Organization -->
+    <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "DEZIGNX",
         "url": "https://www.dezignx.de/",
         "logo": "https://www.dezignx.de/logo.png",
-        "sameAs": []
+        "email": "info@dezignx.de",
+        "telephone": "+491606767001",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Westuferstr. 25",
+          "addressLocality": "Essen",
+          "postalCode": "45356",
+          "addressCountry": "DE"
+        },
+        "areaServed": "DE",
+        "sameAs": [
+          "https://www.instagram.com/dezignx.de/",
+          "https://www.linkedin.com/company/dezignx",
+          "https://www.youtube.com/@dezignx",
+          "https://www.facebook.com/dezignx"
+        ]
       }
     </script>
   </head>
