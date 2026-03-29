@@ -1,4 +1,5 @@
 import { FaInstagram, FaLinkedinIn, FaYoutube, FaFacebookF, FaWhatsapp, FaPhone } from "react-icons/fa6"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
   const year = new Date().getFullYear()
@@ -38,6 +39,8 @@ export default function Footer() {
               <li><a className="hover:text-white transition" href="#projekte">Projekte</a></li>
               <li><a className="hover:text-white transition" href="#ueber-uns">Über uns</a></li>
               <li><a className="hover:text-white transition" href="#kontakt">Kontakt</a></li>
+              <li><Link className="hover:text-white transition" to="/impressum">Impressum</Link></li>
+              <li><Link className="hover:text-white transition" to="/datenschutz">Datenschutz</Link></li>
             </ul>
           </div>
 
@@ -46,7 +49,6 @@ export default function Footer() {
             <ul className="mt-3 grid gap-2 text-white/70">
               <li><a className="hover:text-white transition" href="mailto:info@dezignx.de">info@dezignx.de</a></li>
               <li><a className="hover:text-white transition" href="tel:+491606767001">+49 160 6767001</a></li>
-              <li><a className="hover:text-white transition" href="tel:++491606767001">+49 160 6767001</a></li>
               <li className="text-white/50 text-sm mt-1">Essen</li>
               <li className="text-white/50 text-sm">📍 Deutschland</li>
             </ul>
@@ -54,7 +56,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-white/10 pt-6">
-          <div className="text-white/50 text-sm">© {year} DEZIGNX. Alle Rechte vorbehalten.</div>
+          <div className="flex items-center gap-4">
+            <div className="text-white/50 text-sm">© {year} DEZIGNX. Alle Rechte vorbehalten.</div>
+            <Link to="/impressum" className="text-white/40 text-sm hover:text-white/70 transition">Impressum</Link>
+            <Link to="/datenschutz" className="text-white/40 text-sm hover:text-white/70 transition">Datenschutz</Link>
+          </div>
           <div className="flex gap-2.5">
             <a href="https://wa.me/+491606767001" target="_blank" rel="noreferrer" className="flex items-center gap-1.5 bg-[#25d366] text-white px-5 py-2 rounded-full text-xs font-semibold transition hover:opacity-90"><FaWhatsapp /> WhatsApp</a>
             <a href="tel:+491606767001" className="flex items-center gap-1.5 bg-white/5 text-white border border-white/10 px-5 py-2 rounded-full text-xs font-semibold transition hover:bg-white/10"><FaPhone /> Anrufen</a>
