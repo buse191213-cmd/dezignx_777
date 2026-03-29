@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#070B18]/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 md:px-6 py-1.5">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 md:px-6 py-0.5">
         <a href="#top" className="flex items-center gap-3">
           <div className="flex items-center"><img src={logo} alt="DEZIGNX" className="w-28 h-auto object-contain" /></div>
         </a>
