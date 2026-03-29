@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/8 bg-[#070B18]/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 md:px-6 py-3">
         <a href="#top" className="flex items-center gap-3">
-          <div className="h-10 flex items-center"><img src={logo} alt="DEZIGNX" className="h-12 w-auto object-contain" /></div>
+          <div className="h-14 flex items-center"><img src={logo} alt="DEZIGNX" className="h-16 w-auto object-contain" /></div>
         </a>
         <ul className="hidden items-center gap-5 md:flex">
           {links.map((l) => (
