@@ -22,23 +22,23 @@ export default function Impressum() {
         <div style={styles.card}>
           <p style={styles.text}>
             <strong style={styles.strong}>DEZIGNX</strong><br />
-            Inhaber: [DEIN VOLLSTÄNDIGER NAME]<br />
-            [STRAßE UND HAUSNUMMER]<br />
-            [PLZ ORT]<br />
+            Inhaber: Sener Kirli<br />
+            Westuferstr. 25<br />
+            45356 Essen<br />
             Deutschland
           </p>
           <p style={styles.text}>
             E-Mail: <a href="mailto:info@dezignx.de" style={styles.link}>info@dezignx.de</a><br />
-            Telefon: <a href="tel:+49XXXXXXXXXX" style={styles.link}>[TELEFONNUMMER]</a><br />
-            Mobil: <a href="tel:+49XXXXXXXXXX" style={styles.link}>[MOBILNUMMER]</a>
+            Telefon: <a href="tel:+4920184362510" style={styles.link}>0201 / 84362510</a><br />
+            Mobil: <a href="tel:+491606767001" style={styles.link}>0160 / 6767001</a>
           </p>
           <p style={styles.text}>
-            Umsatzsteuer-ID: <strong style={styles.strong}>[DE-NUMMER]</strong><br />
-            Steuernummer: <strong style={styles.strong}>[STEUERNUMMER]</strong>
+            Umsatzsteuer-ID: <strong style={styles.strong}>DE353055316</strong><br />
+            Steuernummer: <strong style={styles.strong}>111/5145/4871</strong>
           </p>
           <p style={styles.text}>
             Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:<br />
-            [DEIN VOLLSTÄNDIGER NAME], [STRAßE], [PLZ ORT]
+            Sener Kirli, Westuferstr. 25, 45356 Essen
           </p>
           <p style={styles.text}>
             Online-Streitbeilegung:{" "}
@@ -57,7 +57,7 @@ export default function Impressum() {
           <p style={styles.text}>Diese AGB gelten für alle Lieferungen und Leistungen der DEZIGNX an Verbraucher (§ 13 BGB) und Unternehmer (§ 14 BGB).</p>
 
           <h3 style={styles.h3}>2. Vertragspartner</h3>
-          <p style={styles.text}>DEZIGNX, Inhaber [DEIN VOLLSTÄNDIGER NAME], [STRAßE], [PLZ ORT].</p>
+          <p style={styles.text}>DEZIGNX, Inhaber Sener Kirli, Westuferstr. 25, 45356 Essen.</p>
 
           <h3 style={styles.h3}>3. Angebot und Vertragsschluss</h3>
           <p style={styles.text}>Unsere Angebote sind freibleibend. Ein Vertrag kommt durch unsere Auftragsbestätigung oder mit Lieferung der Ware zustande.</p>
@@ -67,9 +67,9 @@ export default function Impressum() {
 
           <h3 style={styles.h3}>5. Zahlung</h3>
           <p style={styles.text}>
-            Zahlung per Vorkasse oder nach Vereinbarung:<br />
-            IBAN: <strong style={styles.strong}>[IBAN]</strong><br />
-            BIC: <strong style={styles.strong}>[BIC]</strong>
+            Zahlung per Vorkasse oder nach Vereinbarung auf das Konto:<br />
+            IBAN: <strong style={styles.strong}>DE30 3605 0105 0002 3808 97</strong><br />
+            BIC: <strong style={styles.strong}>SPESDE3EXXX</strong>
           </p>
 
           <h3 style={styles.h3}>6. Eigentumsvorbehalt</h3>
@@ -85,7 +85,7 @@ export default function Impressum() {
           <p style={styles.text}>Verbrauchern steht ein Widerrufsrecht nach Maßgabe der folgenden Widerrufsbelehrung zu.</p>
 
           <h3 style={styles.h3}>10. Gerichtsstand</h3>
-          <p style={styles.text}>Es gilt deutsches Recht. Gerichtsstand ist [ORT].</p>
+          <p style={styles.text}>Es gilt deutsches Recht. Gerichtsstand ist Essen.</p>
         </section>
 
         <section style={styles.section}>
@@ -95,7 +95,7 @@ export default function Impressum() {
             Die Frist beträgt 14 Tage ab dem Tag, an dem Sie oder ein von Ihnen benannter Dritter die Waren in Besitz genommen haben.
           </p>
           <p style={styles.text}>
-            Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (DEZIGNX, [STRAßE], [PLZ ORT],{" "}
+            Um Ihr Widerrufsrecht auszuüben, müssen Sie uns (DEZIGNX, Westuferstr. 25, 45356 Essen,{" "}
             <a href="mailto:info@dezignx.de" style={styles.link}>info@dezignx.de</a>)
             mittels einer eindeutigen Erklärung (z. B. per Brief oder E-Mail) informieren.
           </p>
@@ -110,7 +110,7 @@ export default function Impressum() {
           <h2 style={styles.h2}>Muster-Widerrufsformular</h2>
           <div style={styles.formBox}>
             <p style={styles.text}>
-              An DEZIGNX, [STRAßE], [PLZ ORT],{" "}
+              An DEZIGNX, Westuferstr. 25, 45356 Essen,{" "}
               <a href="mailto:info@dezignx.de" style={styles.link}>info@dezignx.de</a>
             </p>
             <p style={styles.text}>
